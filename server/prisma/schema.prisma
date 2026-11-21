@@ -1,0 +1,135 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String
+  name         String
+  role         String    @default("admin")
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Service {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  shortDesc   String
+  fullDesc    String
+  icon        String
+  category    String
+  features    String[]
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Project {
+  id             String   @id @default(uuid())
+  title          String
+  slug           String   @unique
+  category       String
+  client         String
+  summary        String
+  description    String
+  image          String
+  liveUrl        String?
+  githubUrl      String?
+  technologies   String[]
+  featured       Boolean  @default(false)
+  completionDate String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model TeamMember {
+  id         String   @id @default(uuid())
+  name       String
+  role       String
+  department String
+  bio        String
+  image      String
+  linkedin   String?
+  twitter    String?
+  github     String?
+  email      String?
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Testimonial {
+  id         String   @id @default(uuid())
+  clientName String
+  clientRole String
+  company    String
+  content    String
+  rating     Int      @default(5)
+  avatar     String
+  featured   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model PricingPlan {
+  id           String   @id @default(uuid())
+  name         String
+  tagline      String
+  priceMonthly Int
+  priceAnnual  Int
+  popular      Boolean  @default(false)
+  features     String[]
+  ctaText      String   @default("Get Started")
+  ctaLink      String   @default("#contact")
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model BlogPost {
+  id           String    @id @default(uuid())
+  title        String
+  slug         String    @unique
+  excerpt      String
+  content      String
+  coverImage   String
+  authorName   String
+  authorRole   String
+  authorAvatar String
+  category     String
+  tags         String[]
+  readTime     String
+  published    Boolean   @default(true)
+  publishedAt  DateTime? @default(now())
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Contact {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String?
+  message   String
+  status    String   @default("unread") // unread, replied, archived
+  ipAddress String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model NewsletterSubscriber {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  source       String   @default("website_footer")
+  isActive     Boolean  @default(true)
+  subscribedAt DateTime @default(now())
+}

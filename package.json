@@ -1,0 +1,16 @@
+{
+  "name": "jishnu-infotech-pern",
+  "version": "1.0.0",
+  "description": "Jishnu Infotech - Enterprise Tech & AI Solutions Website (PERN Stack)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,magenta\" \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

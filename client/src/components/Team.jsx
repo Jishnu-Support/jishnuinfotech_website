@@ -33,7 +33,7 @@ export default function Team() {
       name: 'S. Koushik Raman',
       role: 'Head of SAP & S/4HANA Practice',
       department: 'SAP Solutions',
-      bio: 'Certified SAP Solutions Architect with deep expertise in SAP Business One, S/4HANA migration pathways, shop-floor MRP, and supply chain logistics.',
+      bio: 'Principal SAP Solutions Architect with deep expertise in SAP Business One, S/4HANA migration pathways, shop-floor MRP, and supply chain logistics.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
       linkedin: 'https://linkedin.com/company/jishnu-infotech',
       email: 'contact@jishnuinfotech.com',
@@ -76,7 +76,7 @@ export default function Team() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-orange">
-            Leadership & Certified Practitioners
+            Leadership & Senior Practitioners
           </span>
           <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 dark:text-white">
             Meet the Leaders Driving{' '}
@@ -85,7 +85,7 @@ export default function Team() {
             </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            Certified SAP, Oracle NetSuite, and Zoho consultants committed to delivering measurable outcomes, operational agility, and reliable support.
+            Specialized SAP, Oracle NetSuite, and Zoho consultants committed to delivering measurable outcomes, operational agility, and reliable support.
           </p>
         </div>
 

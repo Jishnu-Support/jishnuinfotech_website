@@ -43,10 +43,10 @@ export default function SolutionsSection() {
     },
     {
       id: 'sap',
-      title: 'SAP (SAP B1 and SAP S/4HANA)',
+      title: 'SAP Business One (SAP B1)',
       path: '/solutions/sap-business-one',
-      platformBadge: 'SAP Certified Partner',
-      subtitle: 'SAP Business One (SAP B1) & SAP S/4HANA Enterprise',
+      platformBadge: 'SAP Partner',
+      subtitle: 'SME Discrete Manufacturing MRP & Cloud Enterprise',
       subLinks: [
         { name: 'SAP Business One (SAP B1)', path: '/solutions/sap-business-one', tag: 'SME MRP' },
         { name: 'SAP S/4HANA Cloud', path: '/solutions/sap-s4hana', tag: 'Digital Core' },
@@ -159,7 +159,7 @@ export default function SolutionsSection() {
             <span className="text-brand-orange">Tailored to Your Business</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            Certified partner expertise delivering resilient, scalable business applications configured to your unique operating model.
+            Enterprise partner expertise delivering resilient, scalable business applications configured to your unique operating model.
           </p>
         </div>
 
@@ -184,7 +184,7 @@ export default function SolutionsSection() {
                   </div>
 
                   <Link to={sol.path}>
-                    <h3 className="text-2xl font-bold font-heading text-slate-900 dark:text-white hover:text-brand-orange transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-white hover:text-brand-orange transition-colors whitespace-nowrap">
                       {sol.title}
                     </h3>
                   </Link>
@@ -202,15 +202,15 @@ export default function SolutionsSection() {
                       <div className="text-[10px] font-bold uppercase tracking-wider text-brand-orange px-1">
                         Select SAP Edition Inside:
                       </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                      <div className="grid grid-cols-1 gap-1.5">
                         {sol.subLinks.map((sub, sIdx) => (
                           <Link
                             key={sIdx}
                             to={sub.path}
                             className="flex items-center justify-between p-2 rounded-lg bg-white dark:bg-slate-900 text-xs font-bold text-slate-800 dark:text-white hover:text-brand-orange border border-slate-200/60 dark:border-slate-800 shadow-xs hover:border-brand-orange transition-all"
                           >
-                            <span className="truncate">{sub.name}</span>
-                            <span className="text-[9px] px-1 py-0.2 rounded bg-orange-100 text-brand-orange dark:bg-orange-950">
+                            <span className="whitespace-nowrap">{sub.name}</span>
+                            <span className="text-[9px] px-1.5 py-0.5 rounded bg-orange-100 text-brand-orange dark:bg-orange-950 whitespace-nowrap">
                               {sub.tag}
                             </span>
                           </Link>
@@ -265,18 +265,18 @@ export default function SolutionsSection() {
             </div>
 
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-              Certified <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700">SAP B1 Add-ons</span> &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Mobile Apps</span>
+              Proprietary <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700">SAP B1 Add-ons</span> &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Mobile Apps</span>
             </h3>
 
             <p className="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-              13 certified, shop-floor tested add-ons and 5 native handheld mobile applications engineered specifically for SAP Business One (SQL &amp; SAP HANA) across manufacturing, steel processing, logistics, and quality management.
+              13 production-ready, shop-floor tested add-ons and 5 native handheld mobile applications engineered specifically for SAP Business One (SQL &amp; SAP HANA) across manufacturing, steel processing, logistics, and quality management.
             </p>
 
             {/* Filter Pills */}
             <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
               {[
                 { id: 'all', label: `All Extensions (${addons.length + mobileApps.length})` },
-                { id: 'addons', label: `Certified Add-ons (${addons.length})` },
+                { id: 'addons', label: `SAP B1 Add-ons (${addons.length})` },
                 { id: 'mobile-apps', label: `Handheld Mobile Apps (${mobileApps.length})` },
               ].map((tab) => (
                 <button
@@ -326,7 +326,7 @@ export default function SolutionsSection() {
                         </h4>
                         <div>
                           <span className={`inline-block mt-0.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold border ${item.badgeColor || 'bg-amber-100 text-amber-800 dark:bg-amber-950/70 dark:text-amber-300 border-amber-300/60'}`}>
-                            {item.badge || 'SAP B1 Certified'}
+                            {item.badge || 'SAP B1 Ready'}
                           </span>
                         </div>
                       </div>
@@ -503,7 +503,7 @@ export default function SolutionsSection() {
                           {selectedAddon.name}
                         </h3>
                         <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-700 dark:text-amber-300 font-bold border border-amber-500/25 dark:border-amber-500/30 shrink-0">
-                          {selectedAddon.badge || selectedAddon.version || 'SAP B1 Certified'}
+                          {selectedAddon.badge || selectedAddon.version || 'SAP B1 Ready'}
                         </span>
                       </div>
                       <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-300 font-medium mt-0.5 leading-snug">

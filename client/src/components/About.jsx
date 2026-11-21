@@ -41,15 +41,15 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Two Certified Partner Badges */}
+                {/* Two Strategic Partner Badges */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">
                     <ShieldCheck className="w-5 h-5 text-brand-brightBlue shrink-0" />
-                    <span className="text-xs font-bold text-slate-200">SAP Certified Partner</span>
+                    <span className="text-xs font-bold text-slate-200">SAP Partner</span>
                   </div>
                   <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">
                     <ShieldCheck className="w-5 h-5 text-brand-orange shrink-0" />
-                    <span className="text-xs font-bold text-slate-200">Oracle NetSuite Certified Partner</span>
+                    <span className="text-xs font-bold text-slate-200">Oracle NetSuite Partner</span>
                   </div>
                 </div>
 

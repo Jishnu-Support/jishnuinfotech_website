@@ -21,7 +21,7 @@ export default function CTABanner() {
               Ready to Modernize Your Business Systems?
             </h2>
             <p className="mt-3 text-base text-slate-300">
-              Schedule a confidential 45-minute platform assessment with our certified SAP, NetSuite & Zoho consultants.
+              Schedule a confidential 45-minute platform assessment with our senior SAP, NetSuite & Zoho consultants.
             </p>
           </div>
 

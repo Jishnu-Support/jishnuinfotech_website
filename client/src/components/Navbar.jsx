@@ -633,11 +633,11 @@ export default function Navbar() {
                             <Server className="w-4 h-4" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between">
-                              <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-orange transition-colors">
+                            <div className="flex items-center justify-between gap-1.5">
+                              <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-orange transition-colors whitespace-nowrap">
                                 SAP Business One (SAP B1)
                               </span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-orange-100 text-brand-orange dark:bg-orange-950/70">
+                              <span className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-orange-100 text-brand-orange dark:bg-orange-950/70 whitespace-nowrap shrink-0">
                                 SME Leader
                               </span>
                             </div>
@@ -1347,7 +1347,7 @@ export default function Navbar() {
                             className="flex items-center gap-2.5 py-2 px-3 rounded-xl text-xs font-bold text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-900/60 hover:text-brand-orange hover:bg-orange-50 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-800 transition-colors"
                           >
                             <span className="w-1.5 h-1.5 rounded-full bg-brand-orange shrink-0" />
-                            <span>SAP Business One (SAP B1)</span>
+                            <span className="whitespace-nowrap">SAP Business One (SAP B1)</span>
                           </Link>
 
                           {/* 3. SAP B1 Add-ons (Below SAP B1, with arrow to show/hide items below) */}

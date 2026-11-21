@@ -52,7 +52,7 @@ export default function HomePage() {
         <title>Jishnu Infotech | ERP & Business Transformation Consulting | Hosur, Tamil Nadu</title>
         <meta
           name="description"
-          content="Jishnu Infotech is an ERP and Business Transformation consulting company in Hosur, Tamil Nadu. Certified SAP Business One, SAP S/4HANA, Oracle NetSuite, and Zoho consulting partner."
+          content="Jishnu Infotech is an ERP and Business Transformation consulting company in Hosur, Tamil Nadu. Leading SAP Business One, SAP S/4HANA, Oracle NetSuite, and Zoho consulting partner."
         />
         <meta property="og:title" content="Jishnu Infotech | ERP & Business Transformation Consulting" />
         <meta

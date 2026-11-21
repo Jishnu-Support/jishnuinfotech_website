@@ -90,7 +90,7 @@ export default function Hero() {
                     &ldquo;Bridging complex industrial shop-floors with world-class cloud ERP &mdash; turning operational friction into measurable enterprise velocity.&rdquo;
                   </p>
                   <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
-                    Jishnu Infotech empowers mid-market manufacturers and large enterprises with institutional-grade ERP deployments, custom SAP B1 add-ons, and certified end-to-end digital transformation across SAP, Oracle NetSuite, and Zoho.
+                    Jishnu Infotech empowers mid-market manufacturers and large enterprises with institutional-grade ERP deployments, custom SAP B1 add-ons, and proven end-to-end digital transformation across SAP, Oracle NetSuite, and Zoho.
                   </p>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Hero() {
               </span>
               <span className="flex items-center gap-1.5">
                 <Award className="w-4 h-4 text-brand-orange" />
-                Certified SAP &amp; NetSuite Technical Team
+                Specialized SAP &amp; NetSuite Technical Team
               </span>
               <span className="flex items-center gap-1.5">
                 <Building2 className="w-4 h-4 text-brand-brightBlue" />
@@ -199,7 +199,7 @@ export default function Hero() {
             {[
               { number: '150+', label: 'Enterprise Implementations', sub: 'Across Manufacturing & Supply Chain' },
               { number: '15+', label: 'Years Combined Expertise', sub: 'Institutional BPR & ERP Delivery' },
-              { number: '13', label: 'Certified SAP Add-ons', sub: 'Engineered for Discrete & Process Lines' },
+              { number: '13', label: 'Proprietary SAP Add-ons', sub: 'Engineered for Discrete & Process Lines' },
               { number: '99.98%', label: 'Go-Live Reliability', sub: 'Strict Zero-Data-Loss Standards' },
             ].map((stat, idx) => (
               <div

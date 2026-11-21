@@ -40,7 +40,7 @@ const solutionsData = {
     shortName: 'SAP B1',
     title: 'SAP Business One (SAP B1)',
     tagline: 'Complete, Scalable ERP Suite Designed for Growing SMEs & Discrete Manufacturing',
-    partnerBadge: 'Certified SAP Partner • Hosur Operations',
+    partnerBadge: 'Enterprise SAP Partner • Hosur Operations',
     color: 'from-blue-600 via-brand-deepBlue to-slate-900',
     accentColor: '#1E90FF',
     heroStats: [
@@ -52,7 +52,7 @@ const solutionsData = {
     overview:
       'SAP Business One is an affordable, comprehensive enterprise resource planning (ERP) system designed specifically for small to mid-sized businesses. It connects and streamlines your core business functions—from financials and procurement to manufacturing MRP, inventory, and sales—into a single digital ecosystem powered by SAP HANA in-memory analytics.',
     whyJIT: [
-      'Certified SAP Consultants with 10+ years experience in Hosur & Tamil Nadu industrial hubs.',
+      'Senior SAP Consultants with 10+ years experience in Hosur & Tamil Nadu industrial hubs.',
       'Proven expertise in discrete manufacturing, automotive tier-1 & tier-2 suppliers, electronics, and precision engineering.',
       'End-to-end turnkey delivery: Business Process Re-engineering, data cleansing, user training, and 24/7 SLA AMC support.',
       'Zero Data Loss guarantee when migrating from legacy systems like Tally, Busy, or QuickBooks.',
@@ -103,7 +103,7 @@ const solutionsData = {
       },
       {
         name: 'SAP B1 On-Premise',
-        desc: 'Installed directly on certified in-house server hardware within your factory or office premises with local network speed.',
+        desc: 'Installed directly on high-performance in-house server hardware within your factory or office premises with local network speed.',
         bestFor: 'Plants with strict internal data policies or local intranet needs.',
       },
       {
@@ -200,7 +200,7 @@ const solutionsData = {
     overview:
       'Oracle NetSuite is the world’s leading cloud-native ERP, designed from the ground up for the web. It provides comprehensive financial management, global multi-subsidiary consolidation (OneWorld), inventory, billing, and SuiteCommerce in a unified browser platform.',
     whyJIT: [
-      'Certified NetSuite SuiteCloud developers for custom SuiteScript, workflows, and third-party API connectors.',
+      'Specialized NetSuite SuiteCloud developers for custom SuiteScript, workflows, and third-party API connectors.',
       'Expertise in Indian statutory GST compliance and cross-border international subsidiaries.',
       'Proven track record with high-growth e-commerce, retail, distribution, and manufacturing firms.',
     ],
@@ -486,7 +486,7 @@ export default function SolutionDetailPage() {
                       Request Confirmed!
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                      Thank you! A certified {solution.shortName} implementation specialist will contact you with a customized demonstration.
+                      Thank you! An experienced {solution.shortName} implementation specialist will contact you with a customized demonstration.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
@@ -582,7 +582,7 @@ export default function SolutionDetailPage() {
                     </button>
 
                     <div className="pt-2 text-center text-[11px] text-slate-500">
-                      🔒 Direct consultation from certified Hosur engineers. Zero spam.
+                      🔒 Direct consultation from senior Hosur engineers. Zero spam.
                     </div>
                   </form>
                 )}

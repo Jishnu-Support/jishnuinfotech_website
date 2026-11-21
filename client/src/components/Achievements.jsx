@@ -139,13 +139,13 @@ export default function Achievements() {
               </h3>
 
               <p className="text-xs text-slate-300 mt-3 leading-relaxed">
-                Certified ERP solution architects, functional analysts, technical developers, and 24/7 SLA support engineers dedicated to your operational success.
+                Expert ERP solution architects, functional analysts, technical developers, and 24/7 SLA support engineers dedicated to your operational success.
               </p>
 
               <div className="mt-6 pt-5 border-t border-white/10 space-y-2">
                 <div className="flex items-center gap-2 text-xs text-slate-300">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>SAP & Oracle Certified Professionals</span>
+                  <span>SAP & Oracle Specialized Professionals</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-slate-300">
                   <CheckCircle2 className="w-3.5 h-3.5 text-brand-orange" />

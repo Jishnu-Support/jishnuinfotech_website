@@ -17,7 +17,7 @@ import {
   Smartphone,
 } from 'lucide-react';
 
-// 13 Certified SAP B1 Add-ons
+// 13 SAP B1 Add-ons
 export const addons = [
   {
     id: 'coil-production',
@@ -131,7 +131,7 @@ export const addons = [
     category: 'addons',
     tagline: 'Direct 1-Click Government NIC/IRP Portal IRN & e-Way Bill Synchronization',
     shortDesc:
-      'Direct, certified host-to-host integration connecting SAP Business One directly to the Government IRP (Invoice Registration Portal) and NIC e-Way Bill system without third-party Excel uploads or manual filing.',
+      'Direct host-to-host integration connecting SAP Business One directly to the Government IRP (Invoice Registration Portal) and NIC e-Way Bill system without third-party Excel uploads or manual filing.',
     icon: QrCode,
     gradient: 'from-emerald-600 to-green-700',
     accentColor: '#10B981',

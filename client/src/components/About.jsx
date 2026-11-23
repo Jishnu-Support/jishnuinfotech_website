@@ -25,8 +25,8 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Visual Corporate Video */}
-          <div className="lg:col-span-5 order-2 lg:order-1 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/90 dark:border-slate-800 bg-slate-950 group">
+          <div className="lg:col-span-6 order-2 lg:order-1 relative">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/90 dark:border-slate-800 bg-slate-950 group aspect-video flex items-center justify-center">
               <video
                 src="/about-corporate.mp4"
                 autoPlay
@@ -37,13 +37,13 @@ export default function About() {
                 disablePictureInPicture
                 disableRemotePlayback
                 controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
-                className="w-full h-[360px] sm:h-[420px] lg:h-[460px] object-cover object-center pointer-events-none"
+                className="w-full h-full object-contain object-center pointer-events-none"
               />
             </div>
           </div>
 
           {/* Right Column: Copy & Checklist */}
-          <div className="lg:col-span-7 order-1 lg:order-2 text-left">
+          <div className="lg:col-span-6 order-1 lg:order-2 text-left">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-orange-100/80 dark:bg-orange-950/60 text-brand-orange text-xs font-bold uppercase tracking-wider mb-4">
               <span>About Jishnu Infotech</span>
             </div>

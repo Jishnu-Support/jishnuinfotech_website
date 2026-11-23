@@ -49,6 +49,7 @@ export default function SolutionsSection() {
       path: '/solutions/sap-business-one',
       platformBadge: 'SAP Partner',
       subtitle: 'Discrete Manufacturing MRP & Operations',
+      logo: '/logos/sap-b1.png',
       description:
         'Affordable, comprehensive ERP engineered for growing mid-market manufacturers, connecting shop-floor BOM, supply chain, and financials via in-memory analytics.',
       keyCapabilities: [
@@ -69,6 +70,7 @@ export default function SolutionsSection() {
       path: '/solutions/sap-s4hana',
       platformBadge: 'SAP Enterprise Partner',
       subtitle: 'Real-Time In-Memory Digital Core',
+      logo: '/logos/sap-s4hana.png',
       description:
         'Flagship next-generation intelligent ERP suite delivering real-time enterprise visibility across multi-plant manufacturing, global supply chains, and predictive operations.',
       keyCapabilities: [
@@ -195,7 +197,7 @@ export default function SolutionsSection() {
               >
                 {/* Top Banner & Badge */}
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-6">
+                  <div className="flex items-center justify-between gap-2 mb-4">
                     <span className={`text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${sol.badgeColor}`}>
                       {sol.platformBadge}
                     </span>
@@ -203,6 +205,18 @@ export default function SolutionsSection() {
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>
+
+                  {sol.logo && (
+                    <div className="mb-3">
+                      <div className="inline-flex items-center bg-white px-3 py-1.5 rounded-xl border border-slate-200/90 dark:border-slate-700 shadow-xs">
+                        <img
+                          src={sol.logo}
+                          alt={sol.title}
+                          className="h-7 w-auto object-contain max-w-[170px]"
+                        />
+                      </div>
+                    </div>
+                  )}
 
                   <Link to={sol.path}>
                     <h3 className="text-xl sm:text-2xl font-bold font-heading text-slate-900 dark:text-white hover:text-brand-orange transition-colors whitespace-nowrap">
@@ -413,10 +427,19 @@ export default function SolutionsSection() {
                   <X className="w-5 h-5" />
                 </button>
 
-                <div className="flex items-center gap-2 mb-3">
+                <div className="flex flex-wrap items-center gap-3 mb-3">
                   <span className={`text-xs font-bold px-3 py-1 rounded-full ${selectedSolution.badgeColor}`}>
                     {selectedSolution.platformBadge}
                   </span>
+                  {selectedSolution.logo && (
+                    <div className="inline-flex items-center bg-white px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-700 shadow-xs">
+                      <img
+                        src={selectedSolution.logo}
+                        alt={selectedSolution.title}
+                        className="h-5 w-auto object-contain max-w-[130px]"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <h3 className="text-2xl font-bold font-heading text-slate-900 dark:text-white">

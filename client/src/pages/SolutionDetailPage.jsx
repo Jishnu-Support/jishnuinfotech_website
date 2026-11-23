@@ -41,6 +41,7 @@ const solutionsData = {
     title: 'SAP Business One (SAP B1)',
     tagline: 'Complete, Scalable ERP Suite Designed for Growing SMEs & Discrete Manufacturing',
     partnerBadge: 'Enterprise SAP Partner • Hosur Operations',
+    logo: '/logos/sap-b1.png',
     color: 'from-blue-600 via-brand-deepBlue to-slate-900',
     accentColor: '#1E90FF',
     heroStats: [
@@ -137,6 +138,7 @@ const solutionsData = {
     title: 'SAP S/4HANA Enterprise',
     tagline: 'Real-Time In-Memory Intelligent Enterprise ERP for Large Organizations',
     partnerBadge: 'Enterprise SAP Practice • Hosur & India',
+    logo: '/logos/sap-s4hana.png',
     color: 'from-blue-700 via-blue-900 to-slate-950',
     accentColor: '#1E90FF',
     heroStats: [
@@ -374,9 +376,20 @@ export default function SolutionDetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-3xl relative p-8 sm:p-12 lg:p-16 text-slate-900 dark:text-white shadow-2xl border border-slate-200/80 dark:border-slate-800 overflow-hidden bg-white/70 dark:bg-slate-900/70 backdrop-blur-md">
               <div className="max-w-5xl relative z-10">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-700/80 text-xs font-bold uppercase tracking-wider mb-6 text-slate-800 dark:text-slate-100 shadow-sm">
-                  <ShieldCheck className="w-4 h-4 text-brand-orange" />
-                  <span>{solution.partnerBadge}</span>
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-700/80 text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-100 shadow-sm">
+                    <ShieldCheck className="w-4 h-4 text-brand-orange" />
+                    <span>{solution.partnerBadge}</span>
+                  </div>
+                  {solution.logo && (
+                    <div className="inline-flex items-center bg-white px-3 py-1.5 rounded-xl border border-slate-200/90 dark:border-slate-700 shadow-xs">
+                      <img
+                        src={solution.logo}
+                        alt={solution.title}
+                        className="h-7 w-auto object-contain max-w-[170px]"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold font-heading tracking-tight leading-tight text-slate-900 dark:text-white whitespace-normal sm:whitespace-nowrap">

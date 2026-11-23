@@ -13,6 +13,7 @@ import {
   Layers,
   Smartphone,
   Cpu,
+  Database,
 } from 'lucide-react';
 import { addons, mobileApps } from '../data/sapAddonsData';
 
@@ -40,29 +41,47 @@ export default function SolutionsSection() {
       color: 'from-blue-600 to-indigo-700',
       badgeColor: 'bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300',
       icon: Cpu,
+      ctaText: 'Explore JIT ERP',
     },
     {
-      id: 'sap',
+      id: 'sap-b1',
       title: 'SAP Business One (SAP B1)',
       path: '/solutions/sap-business-one',
       platformBadge: 'SAP Partner',
-      subtitle: 'Enterprise Discrete Manufacturing MRP & Digital Core',
-      subLinks: [
-        { name: 'SAP Business One (SAP B1)', path: '/solutions/sap-business-one', tag: 'MRP' },
-        { name: 'SAP S/4HANA', path: '/solutions/sap-s4hana', tag: 'Digital Core' },
-      ],
+      subtitle: 'Discrete Manufacturing MRP & Operations',
       description:
-        'Leverage the power of SAP to streamline complex business processes, improve real-time visibility, and drive enterprise-wide efficiency.',
+        'Affordable, comprehensive ERP engineered for growing mid-market manufacturers, connecting shop-floor BOM, supply chain, and financials via in-memory analytics.',
       keyCapabilities: [
-        'Complete SME & discrete manufacturing MRP (SAP B1)',
-        'Real-time HANA in-memory analytics & Crystal Reports',
-        'Large Enterprise supply chain digital core (SAP S/4HANA)',
-        'Multi-currency, GST, e-Way bill & e-Invoicing compliance',
+        'Complete discrete manufacturing MRP with multi-level BOM',
+        'Real-time HANA in-memory analytics & interactive dashboards',
+        'Batch, serial & heat number tracking from inward to dispatch',
+        'Integrated GST, e-Way bill & direct e-Invoicing compliance',
       ],
       suitableFor: 'Manufacturing, Automotive, Pharma, and Growing Mid-Market Enterprises',
       color: 'from-blue-600 to-brand-deepBlue',
       badgeColor: 'bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300',
       icon: Server,
+      ctaText: 'Enter SAP B1',
+    },
+    {
+      id: 'sap-s4hana',
+      title: 'SAP S/4HANA',
+      path: '/solutions/sap-s4hana',
+      platformBadge: 'SAP Enterprise Partner',
+      subtitle: 'Real-Time In-Memory Digital Core',
+      description:
+        'Flagship next-generation intelligent ERP suite delivering real-time enterprise visibility across multi-plant manufacturing, global supply chains, and predictive operations.',
+      keyCapabilities: [
+        'Universal Journal (ACDOCA) for real-time period financial close',
+        'Integrated PP/DS advanced production planning & detailed scheduling',
+        'Multi-entity corporate consolidation & global supply chain core',
+        'Modern Fiori role-based UX with real-time operational insights',
+      ],
+      suitableFor: 'Large Enterprises, Multi-Plant Manufacturers & Global Conglomerates',
+      color: 'from-indigo-600 to-blue-800',
+      badgeColor: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950/60 dark:text-indigo-300',
+      icon: Database,
+      ctaText: 'Enter SAP S/4HANA',
     },
     {
       id: 'netsuite',
@@ -73,15 +92,16 @@ export default function SolutionsSection() {
       description:
         'We help businesses implement and customize NetSuite for better control, scalability, and performance.',
       keyCapabilities: [
-        'Native 100% cloud architecture with zero on-prem hardware',
-        'OneWorld multi-subsidiary financial consolidation',
+        'Native multi-subsidiary financials & OneWorld consolidation',
         'Real-time automated inventory, billing & revenue recognition',
         'SuiteCloud custom workflows, SuiteScript & API integration',
+        'Automated multi-currency & tax compliance management',
       ],
       suitableFor: 'Retail, E-commerce, SaaS, Multi-entity Wholesale & Rapidly Scaling Tech',
       color: 'from-orange-600 to-amber-700',
       badgeColor: 'bg-orange-100 text-orange-800 dark:bg-orange-950/60 dark:text-orange-300',
       icon: Cloud,
+      ctaText: 'Explore NetSuite',
     },
     {
       id: 'zoho',
@@ -101,6 +121,7 @@ export default function SolutionsSection() {
       color: 'from-emerald-600 to-teal-800',
       badgeColor: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300',
       icon: Sparkles,
+      ctaText: 'Explore Zoho',
     },
   ];
 
@@ -163,14 +184,14 @@ export default function SolutionsSection() {
           </p>
         </div>
 
-        {/* 4 Core Solutions Cards: JIT ERP, SAP, NetSuite, Zoho */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-20">
+        {/* 5 Core Enterprise Solutions Cards: JIT ERP, SAP B1, SAP S/4HANA, NetSuite, Zoho */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch mb-20">
           {solutions.map((sol) => {
             const Icon = sol.icon;
             return (
               <div
                 key={sol.id}
-                className="group relative bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl hover:border-brand-orange/40 transition-all duration-300 flex flex-col justify-between"
+                className="group relative bg-white dark:bg-slate-900 rounded-3xl p-7 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl hover:border-brand-orange/40 transition-all duration-300 flex flex-col justify-between"
               >
                 {/* Top Banner & Badge */}
                 <div>
@@ -196,32 +217,9 @@ export default function SolutionsSection() {
                     {sol.description}
                   </p>
 
-                  {/* Sub-options for SAP (SAP B1 and SAP S/4HANA) */}
-                  {sol.subLinks && (
-                    <div className="mt-4 p-2.5 rounded-xl bg-orange-50/80 dark:bg-orange-950/40 border border-orange-200/80 dark:border-orange-900/40 space-y-1.5">
-                      <div className="text-[10px] font-bold uppercase tracking-wider text-brand-orange px-1">
-                        Select SAP Edition Inside:
-                      </div>
-                      <div className="grid grid-cols-1 gap-1.5">
-                        {sol.subLinks.map((sub, sIdx) => (
-                          <Link
-                            key={sIdx}
-                            to={sub.path}
-                            className="flex items-center justify-between p-2 rounded-lg bg-white dark:bg-slate-900 text-xs font-bold text-slate-800 dark:text-white hover:text-brand-orange border border-slate-200/60 dark:border-slate-800 shadow-xs hover:border-brand-orange transition-all"
-                          >
-                            <span className="whitespace-nowrap">{sub.name}</span>
-                            <span className="text-[9px] px-1.5 py-0.5 rounded bg-orange-100 text-brand-orange dark:bg-orange-950 whitespace-nowrap">
-                              {sub.tag}
-                            </span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
                   {/* Bullet points */}
                   <div className="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800 space-y-2.5">
-                    {sol.keyCapabilities.slice(0, 3).map((cap, i) => (
+                    {sol.keyCapabilities.slice(0, 4).map((cap, i) => (
                       <div key={i} className="flex items-start gap-2.5 text-xs text-slate-600 dark:text-slate-300">
                         <Check className="w-4 h-4 text-brand-orange shrink-0 mt-0.5" />
                         <span>{cap}</span>
@@ -234,11 +232,9 @@ export default function SolutionsSection() {
                 <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-3">
                   <Link
                     to={sol.path}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-gradient-to-r from-brand-orange to-orange-500 hover:from-orange-600 hover:to-orange-500 px-4 py-2 rounded-xl shadow-md transition-all group"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-brand-orange to-orange-500 hover:from-orange-600 hover:to-orange-500 px-4 py-2.5 rounded-xl shadow-md transition-all group shrink-0"
                   >
-                    <span>
-                      {sol.id === 'sap' ? 'Enter SAP B1' : sol.id === 'jit-erp' ? 'Explore JIT ERP' : 'Explore Inside'}
-                    </span>
+                    <span>{sol.ctaText || 'Explore Solution'}</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
 

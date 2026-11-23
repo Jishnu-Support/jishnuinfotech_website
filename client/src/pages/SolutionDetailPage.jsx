@@ -134,8 +134,8 @@ const solutionsData = {
   'sap-s4hana': {
     slug: 'sap-s4hana',
     shortName: 'SAP S/4HANA',
-    title: 'SAP S/4HANA Enterprise Cloud',
-    tagline: 'Real-Time In-Memory Intelligent Enterprise Cloud ERP for Large Organizations',
+    title: 'SAP S/4HANA Enterprise',
+    tagline: 'Real-Time In-Memory Intelligent Enterprise ERP for Large Organizations',
     partnerBadge: 'Enterprise SAP Practice • Hosur & India',
     color: 'from-blue-700 via-blue-900 to-slate-950',
     accentColor: '#1E90FF',
@@ -186,8 +186,8 @@ const solutionsData = {
   'oracle-netsuite': {
     slug: 'oracle-netsuite',
     shortName: 'NetSuite',
-    title: 'Oracle NetSuite Cloud ERP',
-    tagline: 'The #1 True Cloud-Native ERP Suite for Multi-Subsidiary Financials & Fast Growth',
+    title: 'Oracle NetSuite ERP',
+    tagline: 'The #1 Enterprise ERP Suite for Multi-Subsidiary Financials & Fast Growth',
     partnerBadge: 'Oracle NetSuite Partner • Hosur & India',
     color: 'from-amber-600 via-orange-700 to-slate-900',
     accentColor: '#FF7A00',
@@ -373,13 +373,13 @@ export default function SolutionDetailPage() {
         <section className="relative overflow-hidden mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-3xl relative p-8 sm:p-12 lg:p-16 text-slate-900 dark:text-white shadow-2xl border border-slate-200/80 dark:border-slate-800 overflow-hidden bg-white/70 dark:bg-slate-900/70 backdrop-blur-md">
-              <div className="max-w-3xl relative z-10">
+              <div className="max-w-5xl relative z-10">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-700/80 text-xs font-bold uppercase tracking-wider mb-6 text-slate-800 dark:text-slate-100 shadow-sm">
                   <ShieldCheck className="w-4 h-4 text-brand-orange" />
                   <span>{solution.partnerBadge}</span>
                 </div>
 
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight leading-tight text-slate-900 dark:text-white">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold font-heading tracking-tight leading-tight text-slate-900 dark:text-white whitespace-normal sm:whitespace-nowrap">
                   {solution.title}
                 </h1>
 

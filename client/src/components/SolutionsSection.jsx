@@ -46,10 +46,10 @@ export default function SolutionsSection() {
       title: 'SAP Business One (SAP B1)',
       path: '/solutions/sap-business-one',
       platformBadge: 'SAP Partner',
-      subtitle: 'SME Discrete Manufacturing MRP & Cloud Enterprise',
+      subtitle: 'Enterprise Discrete Manufacturing MRP & Digital Core',
       subLinks: [
-        { name: 'SAP Business One (SAP B1)', path: '/solutions/sap-business-one', tag: 'SME MRP' },
-        { name: 'SAP S/4HANA Cloud', path: '/solutions/sap-s4hana', tag: 'Digital Core' },
+        { name: 'SAP Business One (SAP B1)', path: '/solutions/sap-business-one', tag: 'MRP' },
+        { name: 'SAP S/4HANA', path: '/solutions/sap-s4hana', tag: 'Digital Core' },
       ],
       description:
         'Leverage the power of SAP to streamline complex business processes, improve real-time visibility, and drive enterprise-wide efficiency.',
@@ -69,7 +69,7 @@ export default function SolutionsSection() {
       title: 'Oracle NetSuite Solutions',
       path: '/solutions/oracle-netsuite',
       platformBadge: 'Oracle NetSuite Partner',
-      subtitle: 'True Cloud-Native ERP Suite',
+      subtitle: 'Comprehensive Enterprise ERP Suite',
       description:
         'We help businesses implement and customize NetSuite for better control, scalability, and performance.',
       keyCapabilities: [

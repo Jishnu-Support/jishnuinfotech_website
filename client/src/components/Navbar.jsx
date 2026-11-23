@@ -637,9 +637,6 @@ export default function Navbar() {
                               <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-orange transition-colors whitespace-nowrap">
                                 SAP Business One (SAP B1)
                               </span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-orange-100 text-brand-orange dark:bg-orange-950/70 whitespace-nowrap shrink-0">
-                                SME Leader
-                              </span>
                             </div>
                             <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1 mt-0.5">
                               Discrete manufacturing MRP, HANA analytics & GST compliance
@@ -772,10 +769,7 @@ export default function Navbar() {
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between">
                               <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-orange transition-colors">
-                                SAP S/4HANA Cloud
-                              </span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded font-medium bg-blue-100 text-blue-800 dark:bg-blue-950/70">
-                                Enterprise Cloud
+                                SAP S/4HANA
                               </span>
                             </div>
                             <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1 mt-0.5">
@@ -784,10 +778,10 @@ export default function Navbar() {
                           </div>
                         </Link>
 
-                        {/* Cloud ERP Platforms */}
+                        {/* Enterprise Platforms */}
                         <div className="pt-2 border-t border-slate-100 dark:border-slate-800">
                           <div className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">
-                            Other Enterprise Clouds
+                            Other Enterprise Platforms
                           </div>
                           <div className="space-y-1">
                             {cloudErpSolutions.map((sol, idx) => {
@@ -809,9 +803,6 @@ export default function Navbar() {
                                     <div className="flex items-center justify-between">
                                       <span className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-orange transition-colors">
                                         {sol.name}
-                                      </span>
-                                      <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${sol.badgeColor}`}>
-                                        {sol.badge}
                                       </span>
                                     </div>
                                     <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1 mt-0.5">

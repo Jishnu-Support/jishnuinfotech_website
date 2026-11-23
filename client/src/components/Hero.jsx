@@ -17,7 +17,7 @@ export default function Hero() {
   const dynamicPhrases = [
     { text: 'Accelerated Digital Expansion', color: 'from-brand-orange via-amber-400 to-orange-500' },
     { text: 'Seamless Enterprise Agility', color: 'from-blue-500 via-cyan-400 to-indigo-600' },
-    { text: 'High-Velocity Cloud Scale', color: 'from-emerald-500 via-teal-400 to-green-500' },
+    { text: 'High-Velocity Enterprise Scale', color: 'from-emerald-500 via-teal-400 to-green-500' },
     { text: 'Predictable Business Growth', color: 'from-purple-500 via-violet-400 to-indigo-500' },
   ];
 
@@ -29,10 +29,10 @@ export default function Hero() {
   }, []);
 
   const platforms = [
-    { name: 'SAP Business One', path: '/solutions/sap-business-one', badge: 'SME Leader' },
-    { name: 'SAP S/4HANA', path: '/solutions/sap-s4hana', badge: 'Cloud Enterprise' },
-    { name: 'Oracle NetSuite', path: '/solutions/oracle-netsuite', badge: 'Cloud Native' },
-    { name: 'Zoho Enterprise', path: '/solutions/zoho-enterprise', badge: 'Agile Ops' },
+    { name: 'SAP Business One', path: '/solutions/sap-business-one' },
+    { name: 'SAP S/4HANA', path: '/solutions/sap-s4hana' },
+    { name: 'Oracle NetSuite', path: '/solutions/oracle-netsuite' },
+    { name: 'Zoho Enterprise', path: '/solutions/zoho-enterprise' },
   ];
 
 
@@ -87,7 +87,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <p className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 leading-snug">
-                    &ldquo;Bridging complex industrial shop-floors with world-class cloud ERP &mdash; turning operational friction into measurable enterprise velocity.&rdquo;
+                    &ldquo;Bridging complex industrial shop-floors with world-class ERP &mdash; turning operational friction into measurable enterprise velocity.&rdquo;
                   </p>
                   <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
                     Jishnu Infotech empowers mid-market manufacturers and large enterprises with institutional-grade ERP deployments, custom SAP B1 add-ons, and proven end-to-end digital transformation across SAP, Oracle NetSuite, and Zoho.
@@ -114,7 +114,6 @@ export default function Hero() {
                 >
                   <CheckCircle2 className="w-3.5 h-3.5 text-brand-orange shrink-0" />
                   <span>{p.name}</span>
-                  <span className="text-[10px] opacity-70 ml-0.5">({p.badge})</span>
                 </Link>
               ))}
             </motion.div>

@@ -24,58 +24,28 @@ export default function About() {
     <section id="about" className="py-24 relative overflow-hidden bg-white/75 dark:bg-slate-950/75 backdrop-blur-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Visual / Graphic with Partner Badges */}
+          {/* Left Column: Visual Corporate Video */}
           <div className="lg:col-span-5 order-2 lg:order-1 relative">
-            <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-900 to-slate-950 p-8 text-white border border-slate-800 shadow-2xl">
-              {/* Decorative Accent */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-brand-orange/10 rounded-full blur-2xl pointer-events-none" />
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/90 dark:border-slate-800 bg-slate-950 group">
+              <video
+                src="/about-corporate.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                disablePictureInPicture
+                disableRemotePlayback
+                controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
+                className="w-full h-[360px] sm:h-[420px] lg:h-[460px] object-cover object-center pointer-events-none"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
 
-              <div className="relative z-10 space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-2xl bg-orange-500/10 text-brand-orange border border-orange-500/20">
-                    <Award className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-white">Jishnu Infotech</h4>
-                    <p className="text-xs text-slate-400">Hosur, Tamil Nadu &bull; Est. 2014</p>
-                  </div>
-                </div>
-
-                {/* Two Strategic Partner Badges */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                  <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">
-                    <ShieldCheck className="w-5 h-5 text-brand-brightBlue shrink-0" />
-                    <span className="text-xs font-bold text-slate-200">SAP Partner</span>
-                  </div>
-                  <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">
-                    <ShieldCheck className="w-5 h-5 text-brand-orange shrink-0" />
-                    <span className="text-xs font-bold text-slate-200">Oracle NetSuite Partner</span>
-                  </div>
-                </div>
-
-                {/* Architecture Highlights */}
-                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-3">
-                  <div className="flex items-center justify-between text-xs text-slate-400">
-                    <span>Implementation Framework</span>
-                    <span className="text-emerald-400 font-semibold">ISO 9001 Aligned</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs px-2.5 py-1 rounded bg-blue-500/20 text-blue-300 font-medium">BPR</span>
-                    <span className="text-slate-500">&rarr;</span>
-                    <span className="text-xs px-2.5 py-1 rounded bg-orange-500/20 text-orange-300 font-medium">Fit-Gap</span>
-                    <span className="text-slate-500">&rarr;</span>
-                    <span className="text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 font-medium">Cutover</span>
-                    <span className="text-slate-500">&rarr;</span>
-                    <span className="text-xs px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 font-medium">Go-Live</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between pt-2 text-xs text-slate-400">
-                  <span className="flex items-center gap-1.5">
-                    <Users className="w-4 h-4 text-brand-orange" />
-                    <span>35+ In-House Consultants</span>
-                  </span>
-                  <span className="text-emerald-400 font-semibold">100% On-Time Go-Live</span>
+              {/* Bottom Tag Badge */}
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                <div className="px-3.5 py-1.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/10 text-white text-[11px] font-bold flex items-center gap-2 shadow-lg">
+                  <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
+                  <span>Jishnu Infotech &bull; Hosur Delivery Center</span>
                 </div>
               </div>
             </div>

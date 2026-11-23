@@ -376,21 +376,22 @@ export default function SolutionDetailPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-3xl relative p-8 sm:p-12 lg:p-16 text-slate-900 dark:text-white shadow-2xl border border-slate-200/80 dark:border-slate-800 overflow-hidden bg-white/70 dark:bg-slate-900/70 backdrop-blur-md">
               <div className="max-w-5xl relative z-10">
-                <div className="flex flex-wrap items-center gap-3 mb-6">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-700/80 text-xs font-bold uppercase tracking-wider text-slate-800 dark:text-slate-100 shadow-sm">
-                    <ShieldCheck className="w-4 h-4 text-brand-orange" />
-                    <span>{solution.partnerBadge}</span>
-                  </div>
-                  {solution.logo && (
-                    <div className="inline-flex items-center bg-white px-3 py-1.5 rounded-xl border border-slate-200/90 dark:border-slate-700 shadow-xs">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-700/80 text-xs font-bold uppercase tracking-wider mb-5 text-slate-800 dark:text-slate-100 shadow-sm">
+                  <ShieldCheck className="w-4 h-4 text-brand-orange" />
+                  <span>{solution.partnerBadge}</span>
+                </div>
+
+                {solution.logo && (
+                  <div className="mb-6 flex items-center">
+                    <div className="inline-flex items-center bg-white px-5 py-3 rounded-2xl border border-slate-200/90 dark:border-slate-700 shadow-md">
                       <img
                         src={solution.logo}
                         alt={solution.title}
-                        className="h-7 w-auto object-contain max-w-[170px]"
+                        className="h-12 sm:h-14 md:h-16 w-auto object-contain max-w-[260px]"
                       />
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
 
                 <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold font-heading tracking-tight leading-tight text-slate-900 dark:text-white whitespace-normal sm:whitespace-nowrap">
                   {solution.title}

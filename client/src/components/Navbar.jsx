@@ -1184,7 +1184,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Right Side: Theme Toggle + Get a Quote (Phone number removed) */}
+            {/* Right Side: Theme Toggle (Get a Quote removed) */}
             <div className="hidden lg:flex items-center gap-3">
 
               {/* Theme Toggle */}
@@ -1206,18 +1206,9 @@ export default function Navbar() {
                   Admin
                 </Link>
               )}
-
-              {/* "Get a Quote" Button */}
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-bold text-sm text-white bg-gradient-to-r from-brand-orange to-orange-500 hover:from-orange-600 hover:to-orange-500 shadow-md shadow-orange-500/25 hover:shadow-orange-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
-              >
-                <span>Get a Quote</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
             </div>
 
-            {/* Right Side on Mobile: Theme toggle + Quick Quote button */}
+            {/* Right Side on Mobile: Theme toggle */}
             <div className="flex items-center gap-1.5 lg:hidden">
               <button
                 onClick={toggleTheme}
@@ -1225,13 +1216,6 @@ export default function Navbar() {
                 className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               >
                 {theme === 'dark' ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-slate-700" />}
-              </button>
-
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="px-3.5 py-1.5 rounded-full text-xs font-bold text-white bg-gradient-to-r from-brand-orange to-orange-500 hover:from-orange-600 shadow-sm"
-              >
-                Quote
               </button>
             </div>
           </div>

@@ -382,12 +382,12 @@ export default function SolutionDetailPage() {
                 </div>
 
                 {solution.logo && (
-                  <div className="mb-6 flex items-center">
-                    <div className="inline-flex items-center bg-white px-5 py-3 rounded-2xl border border-slate-200/90 dark:border-slate-700 shadow-md">
+                  <div className="mb-5 flex items-center">
+                    <div className="inline-flex items-center bg-white px-4 py-2 rounded-xl border border-slate-200/90 dark:border-slate-700 shadow-xs">
                       <img
                         src={solution.logo}
                         alt={solution.title}
-                        className="h-12 sm:h-14 md:h-16 w-auto object-contain max-w-[260px]"
+                        className="h-9 sm:h-10 md:h-11 w-auto object-contain max-w-[190px]"
                       />
                     </div>
                   </div>

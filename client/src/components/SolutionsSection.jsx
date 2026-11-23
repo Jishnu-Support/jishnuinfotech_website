@@ -208,11 +208,11 @@ export default function SolutionsSection() {
 
                   {sol.logo && (
                     <div className="mb-4">
-                      <div className="inline-flex items-center bg-white px-4 py-2 rounded-2xl border border-slate-200/90 dark:border-slate-700 shadow-sm">
+                      <div className="inline-flex items-center bg-white px-3.5 py-1.5 rounded-xl border border-slate-200/90 dark:border-slate-700 shadow-xs">
                         <img
                           src={sol.logo}
                           alt={sol.title}
-                          className="h-10 sm:h-11 w-auto object-contain max-w-[200px]"
+                          className="h-8 sm:h-9 w-auto object-contain max-w-[170px]"
                         />
                       </div>
                     </div>

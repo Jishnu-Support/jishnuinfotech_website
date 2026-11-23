@@ -29,7 +29,7 @@ export default function SolutionsSection() {
       platformBadge: 'Proprietary Manufacturing ERP',
       subtitle: 'Discrete Manufacturing, BOM, Job-Work & Shop-Floor Governance',
       description:
-        'A comprehensive, modular ERP designed from the ground up for automotive ancillaries, fabrication plants, and precision engineering factories in the Hosur-Bangalore industrial corridor.',
+        'A comprehensive, modular cloud ERP designed from the ground up for automotive ancillaries, fabrication plants, and precision engineering factories.',
       keyCapabilities: [
         'Multi-level BOM & routing with cycle time tracking',
         'Subcontracting & Job-Work DC reconciliation (Annexure IV)',

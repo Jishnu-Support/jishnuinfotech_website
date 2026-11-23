@@ -3,11 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowRight,
-  ShieldCheck,
   CheckCircle2,
-  Sparkles,
-  Award,
-  Building2,
   PhoneCall,
 } from 'lucide-react';
 
@@ -74,25 +70,20 @@ export default function Hero() {
               </div>
             </motion.h1>
 
-            {/* Executive Quote Card */}
+            {/* Executive Message Card */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.18 }}
               className="mt-8 sm:mt-10 p-4 sm:p-5 rounded-2xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-l-4 border-l-brand-orange border-y border-r border-slate-200/90 dark:border-slate-800 shadow-md relative overflow-hidden"
             >
-              <div className="flex items-start gap-3">
-                <div className="p-2 rounded-xl bg-orange-500/10 text-brand-orange shrink-0 mt-0.5">
-                  <Sparkles className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 leading-snug">
-                    &ldquo;Bridging complex industrial shop-floors with world-class ERP &mdash; turning operational friction into measurable enterprise velocity.&rdquo;
-                  </p>
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
-                    Jishnu Infotech empowers mid-market manufacturers and large enterprises with institutional-grade ERP deployments, custom SAP B1 add-ons, and proven end-to-end digital transformation across SAP, Oracle NetSuite, and Zoho.
-                  </p>
-                </div>
+              <div>
+                <p className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 leading-snug">
+                  Bridging complex industrial shop-floors with world-class ERP &mdash; turning operational friction into measurable enterprise velocity.
+                </p>
+                <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+                  Jishnu Infotech empowers mid-market manufacturers and large enterprises with institutional-grade ERP deployments, custom SAP B1 add-ons, and proven end-to-end digital transformation across SAP, Oracle NetSuite, and Zoho.
+                </p>
               </div>
             </motion.div>
 
@@ -149,22 +140,6 @@ export default function Hero() {
                 <span>+91 95668 23219</span>
               </a>
             </motion.div>
-
-            {/* Quick Trust Checks */}
-            <div className="mt-8 pt-5 border-t border-slate-200/80 dark:border-slate-800/80 flex flex-wrap items-center gap-5 text-xs font-semibold text-slate-600 dark:text-slate-400">
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                Zero Data Loss Migration Guaranteed
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Award className="w-4 h-4 text-brand-orange" />
-                Specialized SAP &amp; NetSuite Technical Team
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Building2 className="w-4 h-4 text-brand-brightBlue" />
-                Hosur Operational Delivery Center
-              </span>
-            </div>
           </div>
 
           {/* Right Column: Clean Premium Enterprise Video Visual (Aligned to Top) */}

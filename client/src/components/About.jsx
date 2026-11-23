@@ -39,15 +39,6 @@ export default function About() {
                 controlsList="nodownload nofullscreen noremoteplayback noplaybackrate"
                 className="w-full h-[360px] sm:h-[420px] lg:h-[460px] object-cover object-center pointer-events-none"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
-
-              {/* Bottom Tag Badge */}
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                <div className="px-3.5 py-1.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/10 text-white text-[11px] font-bold flex items-center gap-2 shadow-lg">
-                  <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
-                  <span>Jishnu Infotech &bull; Hosur Delivery Center</span>
-                </div>
-              </div>
             </div>
           </div>
 

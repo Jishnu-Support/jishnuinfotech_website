@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 55" width="200" height="55">
+  <defs>
+    <linearGradient id="blGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <!-- Packaging Drum / Globe Icon -->
+  <g transform="translate(6, 8)">
+    <rect x="7" y="6" width="28" height="30" rx="6" fill="url(#blGrad)"/>
+    <ellipse cx="21" cy="11" rx="11" ry="3.5" fill="#60a5fa"/>
+    <ellipse cx="21" cy="21" rx="11" ry="3" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.7"/>
+    <ellipse cx="21" cy="31" rx="11" ry="3.5" fill="#1e3a8a"/>
+    <path d="M16,16 L26,26 M26,16 L16,26" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <!-- Typography -->
+  <text x="47" y="24" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="14.5" fill="#0f172a" letter-spacing="0.3">BALMER LAWRIE</text>
+  <text x="48" y="39" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="9" fill="#1e40af" letter-spacing="2">VAN LEER</text>
+</svg>

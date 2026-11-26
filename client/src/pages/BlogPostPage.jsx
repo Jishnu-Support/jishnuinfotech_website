@@ -6,10 +6,100 @@ import { ArrowLeft, Clock, Calendar, Share2, Tag, CheckCircle2 } from 'lucide-re
 import { FaLinkedinIn, FaXTwitter, FaWhatsapp } from 'react-icons/fa6';
 import api from '../api/client';
 
+const fallbackPosts = [
+  {
+    id: 'fb-1',
+    title: 'SAP Business One HANA vs SQL: Why In-Memory Architecture Matters for Automotive Tier-1 Suppliers',
+    slug: 'sap-business-one-hana-vs-sql-manufacturing',
+    category: 'SAP B1 Insights',
+    authorName: 'Senior SAP Architect',
+    authorRole: 'Enterprise Systems Lead',
+    authorAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+    date: 'Nov 12, 2026',
+    publishedAt: '2026-11-12',
+    readTime: '6 min read',
+    excerpt:
+      'A technical deep-dive into how 1-second in-memory MRP calculation prevents factory floor idle time and improves OTIF delivery rates.',
+    content: `### The Manufacturing Challenge in Discrete Plants
+Automotive component manufacturers and precision engineering plants face tight delivery windows, complex multi-level BOMs, and high-mix low-volume orders. When production planning runs on traditional relational disk-based databases, MRP wizards can take 45 to 90 minutes to compute material shortages across thousands of parts.
+
+### In-Memory HANA Computing: Sub-Second Calculation
+By leveraging SAP HANA in-memory architecture:
+1. **Real-Time Material Requirements Planning (MRP)**: Planners can simulate multiple demand scenarios in seconds rather than waiting for overnight batch runs.
+2. **Interactive Pervasive Dashboards**: Shift managers see live scrap ratios, machine availability, and job-work delivery status directly on mobile and floor terminals.
+3. **Automated Statutory Compliance**: Indian GST e-Invoicing, e-Way bills, and TDS reconciliations execute synchronously with accounting document postings.
+
+### Measurable ROI
+Plants running SAP Business One on HANA experience a 35% reduction in inventory holding costs and achieve over 99.4% On-Time In-Full (OTIF) dispatch velocity.`,
+    coverImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+    tags: ['SAP B1', 'HANA', 'Manufacturing', 'MRP'],
+  },
+  {
+    id: 'fb-2',
+    title: 'ECC to SAP S/4HANA: Greenfield vs Brownfield Migration Strategy for Indian Enterprises',
+    slug: 'sap-s4hana-greenfield-vs-brownfield-migration',
+    category: 'Enterprise Transformation',
+    authorName: 'Enterprise Practice Lead',
+    authorRole: 'Chief Solution Architect',
+    authorAvatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80',
+    date: 'Nov 04, 2026',
+    publishedAt: '2026-11-04',
+    readTime: '8 min read',
+    excerpt:
+      'Key architectural decision criteria for CIOs: managing Universal Journal cutover, custom ABAP remediation, and continuous accounting.',
+    content: `### Greenfield vs. Brownfield: Framing the Choice
+When transitioning from legacy SAP ECC 6.0 to SAP S/4HANA, enterprise leadership must balance the desire for a clean slate with the imperative to preserve decades of validated historical business records.
+
+### Greenfield: Re-engineering from Scratch
+- **Best For**: Conglomerates with heavy custom ABAP debt that no longer reflects modern supply chain models.
+- **Advantage**: Full adoption of SAP Best Practices and simplified Universal Journal (ACDOCA) architecture.
+
+### Brownfield: In-Place System Conversion
+- **Best For**: Well-maintained ECC instances where historical ledger traceability and operational continuity are paramount.
+- **Advantage**: Shorter project timelines, lower user change fatigue, and preserved master data structures with zero cutover data loss.
+
+### Jishnu Infotech's 4-Phase Migration Methodology
+We combine automated ABAP remediation tools with As-Is/To-Be process mapping to ensure a zero-data-loss transition with zero operational disruption to active manufacturing lines.`,
+    coverImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    tags: ['SAP S/4HANA', 'Migration', 'ECC', 'Cloud'],
+  },
+  {
+    id: 'fb-3',
+    title: 'NetSuite vs SAP Business One: Selecting the Right ERP for Scaling Multi-Location Companies',
+    slug: 'netsuite-vs-sap-business-one-comparison',
+    category: 'ERP Consulting',
+    authorName: 'Principal Consultant',
+    authorRole: 'ERP Selection Advisory',
+    authorAvatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
+    date: 'Oct 28, 2026',
+    publishedAt: '2026-10-28',
+    readTime: '10 min read',
+    excerpt:
+      'An objective, side-by-side comparison of total cost of ownership (TCO), multi-subsidiary consolidation, implementation speed, and manufacturing suitability.',
+    content: `### Strategic Fitment Analysis
+Selecting between Oracle NetSuite and SAP Business One is not a question of which software is better, but which platform aligns with your operational DNA.
+
+### Oracle NetSuite: Pure Cloud Multi-Entity Agility
+- Native multi-currency and multi-subsidiary consolidation (OneWorld).
+- Ideal for omnichannel retail, e-commerce brands, high-growth technology firms, and multi-state distribution networks.
+- 100% cloud architecture with zero on-premise server maintenance.
+
+### SAP Business One: Deep Discrete Manufacturing Strength
+- Unrivalled shop-floor BOM routing, MRP wizards, machine scheduling, and subcontracting (Annexure IV) controls.
+- Choice of cloud SaaS or high-performance on-premise factory servers with local LAN speed.
+- Native SAP HANA in-memory real-time analytics.
+
+### Making the Right Choice
+Talk to Jishnu Infotech's independent ERP advisory team to run a formal fit-gap analysis tailored to your current scale and 5-year enterprise roadmap.`,
+    coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    tags: ['NetSuite', 'SAP B1', 'ERP Selection'],
+  },
+];
+
 export default function BlogPostPage() {
   const { slug } = useParams();
-  const [post, setPost] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [post, setPost] = useState(() => fallbackPosts.find((p) => p.slug === slug) || null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -19,9 +109,8 @@ export default function BlogPostPage() {
           setPost(res.data.data);
         }
       } catch (err) {
-        console.warn('Failed to load article:', err.message);
-      } finally {
-        setLoading(false);
+        const fallback = fallbackPosts.find((p) => p.slug === slug);
+        if (fallback) setPost(fallback);
       }
     };
     fetchPost();

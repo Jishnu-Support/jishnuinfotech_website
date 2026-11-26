@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 55" width="200" height="55">
+  <defs>
+    <linearGradient id="mgmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843"/>
+      <stop offset="100%" stop-color="#9d174d"/>
+    </linearGradient>
+  </defs>
+  <!-- MGM Crown Monogram -->
+  <g transform="translate(6, 8)">
+    <rect x="4" y="4" width="34" height="34" rx="8" fill="url(#mgmGrad)"/>
+    <!-- Crown -->
+    <path d="M12,14 L15,19 L21,12 L27,19 L30,14 L30,22 L12,22 Z" fill="#fbbf24"/>
+    <text x="9" y="32" font-family="system-ui, sans-serif" font-weight="900" font-size="10.5" fill="#ffffff" letter-spacing="0.5">MGM</text>
+  </g>
+  <!-- Typography -->
+  <text x="50" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="18" fill="#0f172a" letter-spacing="0.5">MGM GROUP</text>
+  <text x="51" y="42" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="8" fill="#831843" letter-spacing="1">M G MUTHU GROUP</text>
+</svg>

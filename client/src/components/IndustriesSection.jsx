@@ -419,7 +419,15 @@ export default function IndustriesSection() {
                     alt={`${client.name} logo`}
                     className="max-h-12 max-w-full object-contain filter group-hover:scale-105 transition-transform"
                     loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      const fallback = e.currentTarget.parentElement.querySelector('.logo-fallback');
+                      if (fallback) fallback.style.display = 'flex';
+                    }}
                   />
+                  <div className="logo-fallback hidden h-10 w-full items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-white font-extrabold text-xs px-2">
+                    {client.name}
+                  </div>
                 </div>
 
                 {/* Company & Domain Label */}

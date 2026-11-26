@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 55" width="200" height="55">
+  <defs>
+    <linearGradient id="ascentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <!-- Circuit Icon -->
+  <g transform="translate(6, 8)">
+    <rect x="4" y="4" width="32" height="32" rx="6" fill="#0f172a"/>
+    <path d="M10,20 L16,20 L20,12 L28,12" stroke="#38bdf8" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M12,28 L20,28 L24,24 L30,24" stroke="#4ade80" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="28" cy="12" r="2.5" fill="#38bdf8"/>
+    <circle cx="30" cy="24" r="2.5" fill="#4ade80"/>
+    <circle cx="10" cy="20" r="2" fill="#38bdf8"/>
+    <circle cx="12" cy="28" r="2" fill="#4ade80"/>
+  </g>
+  <!-- Typography -->
+  <text x="48" y="26" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="17" fill="#0f172a" letter-spacing="0.5">ASCENT</text>
+  <text x="49" y="41" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="8.5" fill="#0284c7" letter-spacing="2">CIRCUITS</text>
+</svg>

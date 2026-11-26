@@ -275,10 +275,96 @@ const solutionsData = {
       },
     ],
   },
+  'jit-erp': {
+    slug: 'jit-erp',
+    shortName: 'JIT ERP',
+    title: 'JIT ERP Manufacturing Platform',
+    tagline: 'Comprehensive Modular Cloud ERP Engineered for Discrete Manufacturing & Precision Engineering',
+    partnerBadge: 'Proprietary Manufacturing ERP • Jishnu Infotech',
+    color: 'from-blue-600 via-indigo-700 to-slate-900',
+    accentColor: '#2563EB',
+    heroStats: [
+      { label: 'Implementation Time', value: '4 – 8 Wks' },
+      { label: 'Target Industry', value: 'Automotive & Precision' },
+      { label: 'Job-Work & DC', value: '100% Annexure IV' },
+      { label: 'Architecture', value: 'Cloud-Native & Modular' },
+    ],
+    overview:
+      'JIT ERP is Jishnu Infotech’s proprietary manufacturing and shop-floor operating system, engineered specifically for automotive ancillaries, fabrication plants, and precision engineering factories in the Hosur-Bangalore industrial corridor. It unifies multi-level BOMs, subcontracting job-work reconciliations, machine cycle times, and automated dispatch compliance into a high-performance modular ecosystem.',
+    whyJIT: [
+      'Tailored for automotive tier-1 & tier-2 suppliers, sheet metal fabrication, and tool rooms.',
+      'Comprehensive subcontracting (Job-Work) tracking with Annexure IV delivery challan reconciliation.',
+      'Machine-level cycle time analysis, real-time scrap tracking, and Overall Equipment Effectiveness (OEE).',
+      'Seamless integration with statutory Indian GST e-Invoicing and e-Way bills.',
+    ],
+    modules: [
+      {
+        title: 'Multi-Level BOM & Engineering Routing',
+        icon: Cpu,
+        desc: 'Manage multi-stage component assemblies, sub-assemblies, raw material consumption norms, and engineering change notices (ECN).',
+        features: ['Multi-Level Assembly BOM', 'Machine Cycle Time Routing', 'Raw Material Consumption Norms', 'Scrap & Rejection Tracking'],
+      },
+      {
+        title: 'Subcontracting & Job-Work DC Reconciliation',
+        icon: Layers,
+        desc: 'End-to-end governance of external vendor processes with statutory Annexure IV challans and material loss reconciliation.',
+        features: ['Automated Delivery Challan Generation', 'Annexure IV Reconciliation', 'Vendor Scrap Recovery Tracking', 'Job-Work Service PO Processing'],
+      },
+      {
+        title: 'Shop-Floor Operations & Machine OEE',
+        icon: Server,
+        desc: 'Track stage-wise work orders, machine uptime, operator productivity, and bottleneck queues with live terminal updates.',
+        features: ['Stage-Wise Work Order Tracking', 'Live Machine Downtime Logs', 'Operator Shift Productivity', 'Real-Time Rejection Analytics'],
+      },
+      {
+        title: 'Inventory, Batch & Heat Traceability',
+        icon: CheckCircle2,
+        desc: 'Maintain granular traceability from raw material mill heat certificates to finished part dispatch barcodes.',
+        features: ['Heat & Batch Number Tracking', 'Multi-Bin Warehouse Locations', 'FIFO Raw Material Issuance', 'Real-Time Re-Order Point Alerts'],
+      },
+      {
+        title: 'Quality Assurance & Pre-Dispatch Inspection (PDI)',
+        icon: ShieldCheck,
+        desc: 'Enforce inward raw material inspection, stage inspection, and Certificate of Analysis (CoA) generation before dispatch.',
+        features: ['Inward Sampling & Rejection Logs', 'Stage-Wise Quality Gates', 'Automated PDI & CoA Generation', 'Customer Return (RMA) Analysis'],
+      },
+      {
+        title: 'GST Billing, e-Way & Financial Accounting',
+        icon: BarChart3,
+        desc: 'Direct integrated invoicing with NIC e-Way bill and e-Invoicing APIs, automated ledgers, and accounts receivable tracking.',
+        features: ['1-Click GST e-Invoice & QR Code', 'Automated e-Way Bill Generation', 'Accounts Receivable Aging Reports', 'Bank Reconciliation & Ledgers'],
+      },
+    ],
+    deploymentOptions: [
+      {
+        name: 'Private Cloud (SaaS)',
+        desc: 'Fully managed cloud instance with automated hourly database snapshots, SSL encryption, and high availability.',
+        bestFor: 'Factories wanting zero on-premise IT maintenance overhead.',
+      },
+      {
+        name: 'Hybrid Factory Edge',
+        desc: 'Local edge plant server for uninterrupted shop-floor barcode scanning and machine logging, synchronized with cloud.',
+        bestFor: 'Continuous manufacturing lines requiring local network speed.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'How fast can JIT ERP be deployed in our plant?',
+        a: 'Standard deployments for fabrication and automotive ancillary factories take 4 to 8 weeks, including master data cleansing, BOM configuration, and operator training.',
+      },
+      {
+        q: 'Can JIT ERP integrate with our existing Tally or SAP accounting?',
+        a: 'Yes. JIT ERP features automated API bridges to export finalized dispatch journals and ledger entries into Tally Prime or SAP Business One.',
+      },
+    ],
+  },
 };
 
 // Aliases for user-friendly URL navigation
 const slugMap = {
+  'jit-erp': 'jit-erp',
+  'jiterp': 'jit-erp',
+  'jit': 'jit-erp',
   'sapb1': 'sap-business-one',
   'sap-b1': 'sap-business-one',
   'sap-business-one': 'sap-business-one',

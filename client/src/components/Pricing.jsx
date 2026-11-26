@@ -4,22 +4,68 @@ import { Check, Sparkles, ArrowRight } from 'lucide-react';
 import api from '../api/client';
 import SpotlightCard from './SpotlightCard';
 
+const defaultPlans = [
+  {
+    id: 'plan_001',
+    name: 'Growth SME Core',
+    popular: false,
+    priceMonthly: '₹28,000',
+    priceAnnual: '₹22,400',
+    description: 'Tailored for growing fabrication units, assembly workshops, and discrete manufacturers transitioning from Tally/Busy to modern ERP.',
+    features: [
+      'Core Financials, GST e-Invoice & e-Way Bill',
+      'Inventory, Multi-Warehouse & Batch Tracking',
+      'Standard BOM & Production Order Workflows',
+      'Up to 10 Named Users & Cloud Hosting',
+      'Dedicated AMC SLA & Business Hours Support',
+    ],
+  },
+  {
+    id: 'plan_002',
+    name: 'Enterprise Scale (SAP / NetSuite)',
+    popular: true,
+    priceMonthly: '₹65,000',
+    priceAnnual: '₹52,000',
+    description: 'Comprehensive ERP deployment for established tier-1/tier-2 suppliers, multi-plant engineering companies, and scaling brands.',
+    features: [
+      'Multi-Level MRP, Routing & Capacity Scheduling',
+      'Quality Inspection & Job-Work Annexure IV Reconciliations',
+      'Custom HANA / Fiori Executive Dashboards & Analytics',
+      'Full API Middleware for Banking & Shop-floor Machines',
+      '24/7 Priority SLA Support & Named Solution Architect',
+    ],
+  },
+  {
+    id: 'plan_003',
+    name: 'Custom Transformation',
+    popular: false,
+    priceMonthly: 'Custom',
+    priceAnnual: 'Custom',
+    description: 'Enterprise advisory, greenfield SAP S/4HANA migration, complex multi-subsidiary consolidation, or turnkey bespoke software engineering.',
+    features: [
+      'Full As-Is / To-Be Business Process Re-engineering (BPR)',
+      'Enterprise SAP S/4HANA, NetSuite OneWorld or Zoho Enterprise',
+      'Zero Data Loss historical ledger migration guarantee',
+      'Custom ABAP, SuiteScript or Cloud Microservices Development',
+      'Dedicated On-Site Implementation Team & Change Management',
+    ],
+  },
+];
+
 export default function Pricing() {
-  const [plans, setPlans] = useState([]);
+  const [plans, setPlans] = useState(defaultPlans);
   const [isAnnual, setIsAnnual] = useState(true);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchPricing = async () => {
       try {
         const res = await api.get('/pricing');
-        if (res.data?.data) {
+        if (res.data?.data && res.data.data.length > 0) {
           setPlans(res.data.data);
         }
       } catch (err) {
         console.warn('Pricing fallback load:', err.message);
-      } finally {
-        setLoading(false);
       }
     };
     fetchPricing();

@@ -26,7 +26,7 @@ export default function SolutionsSection() {
     {
       id: 'jit-erp',
       title: 'JIT ERP',
-      path: '#contact',
+      path: '/solutions/jit-erp',
       platformBadge: 'Proprietary Manufacturing ERP',
       subtitle: 'Discrete Manufacturing, BOM, Job-Work & Shop-Floor Governance',
       description:

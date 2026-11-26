@@ -5,9 +5,51 @@ import { motion } from 'framer-motion';
 import { Search, Clock, Calendar, ArrowRight, Tag, BookOpen } from 'lucide-react';
 import api from '../api/client';
 
+const fallbackPosts = [
+  {
+    id: 'fb-1',
+    title: 'SAP Business One HANA vs SQL: Why In-Memory Architecture Matters for Automotive Tier-1 Suppliers',
+    slug: 'sap-business-one-hana-vs-sql-manufacturing',
+    category: 'SAP B1 Insights',
+    author: 'Senior SAP Architect',
+    date: 'Nov 12, 2026',
+    readTime: '6 min read',
+    excerpt:
+      'A technical deep-dive into how 1-second in-memory MRP calculation prevents factory floor idle time and improves OTIF delivery rates.',
+    coverImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+    tags: ['SAP B1', 'HANA', 'Manufacturing', 'MRP'],
+  },
+  {
+    id: 'fb-2',
+    title: 'ECC to SAP S/4HANA: Greenfield vs Brownfield Migration Strategy for Indian Enterprises',
+    slug: 'sap-s4hana-greenfield-vs-brownfield-migration',
+    category: 'Enterprise Transformation',
+    author: 'Enterprise Practice Lead',
+    date: 'Nov 04, 2026',
+    readTime: '8 min read',
+    excerpt:
+      'Key architectural decision criteria for CIOs: managing Universal Journal cutover, custom ABAP remediation, and continuous accounting.',
+    coverImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    tags: ['SAP S/4HANA', 'Migration', 'ECC', 'Cloud'],
+  },
+  {
+    id: 'fb-3',
+    title: 'NetSuite vs SAP Business One: Selecting the Right ERP for Scaling Multi-Location Companies',
+    slug: 'netsuite-vs-sap-business-one-comparison',
+    category: 'ERP Consulting',
+    author: 'Principal Consultant',
+    date: 'Oct 28, 2026',
+    readTime: '10 min read',
+    excerpt:
+      'An objective, side-by-side comparison of total cost of ownership (TCO), multi-subsidiary consolidation, implementation speed, and manufacturing suitability.',
+    coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+    tags: ['NetSuite', 'SAP B1', 'ERP Selection'],
+  },
+];
+
 export default function BlogPage() {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState(fallbackPosts);
+  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -15,13 +57,11 @@ export default function BlogPage() {
     const fetchPosts = async () => {
       try {
         const res = await api.get('/blog');
-        if (res.data?.data) {
+        if (res.data?.data && res.data.data.length > 0) {
           setPosts(res.data.data);
         }
       } catch (err) {
         console.warn('Blog load error:', err.message);
-      } finally {
-        setLoading(false);
       }
     };
     fetchPosts();

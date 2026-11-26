@@ -1,43 +1,43 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, PenTool, Terminal, ShieldCheck, Rocket, RefreshCcw } from 'lucide-react';
+import { Search, Settings2, Database, Users, Rocket } from 'lucide-react';
 
 export default function Process() {
   const steps = [
     {
       num: '01',
-      title: 'Discovery & System Blueprinting',
-      desc: 'We dissect your technical bottlenecks, define data boundaries, calculate latency thresholds, and map out a comprehensive architecture diagram before writing a single line of code.',
+      title: 'Process Audit & As-Is / To-Be Blueprinting',
+      desc: 'We conduct thorough on-site walkthroughs across your procurement, stores, production, job-work, dispatch, and finance operations. We document current bottlenecks and map every workflow into an approved To-Be functional blueprint.',
       icon: Search,
-      tag: 'Phase 1: Architecture',
+      tag: 'Phase 1: Discovery & Blueprint',
     },
     {
       num: '02',
-      title: 'Rapid Agile Sprints & CI/CD',
-      desc: 'Bi-weekly milestones with functioning preview environments. You review working software, inspect clean code, and participate in interactive sprint demos with our engineers.',
-      icon: Terminal,
-      tag: 'Phase 2: Execution',
+      title: 'Platform Configuration & Custom Localization',
+      desc: 'Configuring multi-level Bills of Materials (BOM), routings, work centers, GST tax engines, e-Invoicing, approval hierarchies, and building bespoke industry add-ons.',
+      icon: Settings2,
+      tag: 'Phase 2: Configuration',
     },
     {
       num: '03',
-      title: 'Vulnerability Scanning & Hardening',
-      desc: 'Continuous automated SAST/DAST testing, penetration validation, load testing up to 100k requests/sec, and strict compliance alignment (SOC 2, HIPAA, ISO).',
-      icon: ShieldCheck,
-      tag: 'Phase 3: Verification',
+      title: 'Master Data Cleansing & Financial Reconciliation',
+      desc: 'Extracting, deduplicating, and normalizing chart of accounts, vendor/customer ledgers, opening stock valuations, and open orders from Tally, Excel, or legacy ERPs with strict trial balance reconciliation.',
+      icon: Database,
+      tag: 'Phase 3: Data Migration',
     },
     {
       num: '04',
-      title: 'Zero-Downtime Deployment',
-      desc: 'Blue/green or canary production releases governed by GitOps and infrastructure-as-code scripts, ensuring complete operational continuity and instant rollback capabilities.',
-      icon: Rocket,
-      tag: 'Phase 4: Launch',
+      title: 'Departmental UAT & Hands-On User Training',
+      desc: 'Simulating full business cycles with real transaction batches. We conduct hands-on training for storekeepers, machine operators, billing clerks, and finance heads until they operate the system comfortably.',
+      icon: Users,
+      tag: 'Phase 4: UAT & Training',
     },
     {
       num: '05',
-      title: 'Telemetry & Proactive SLA Support',
-      desc: 'Distributed Grafana and Prometheus monitoring, automated alerting thresholds, proactive cloud cost optimization, and 24/7 engineering incident response.',
-      icon: RefreshCcw,
-      tag: 'Phase 5: Scale',
+      title: 'Cutover Go-Live, Floor Hypercare & AMC Support',
+      desc: 'Executing a controlled live cutover during a scheduled maintenance window. Our functional consultants stand on your shop floor during initial entries and the first month-end closing, backed by SLA-driven ongoing AMC.',
+      icon: Rocket,
+      tag: 'Phase 5: Go-Live & Support',
     },
   ];
 
@@ -47,16 +47,16 @@ export default function Process() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-orange">
-            Engineering Methodology
+            Implementation Lifecycle
           </span>
           <h2 className="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 dark:text-white">
             How We Deliver With{' '}
             <span className="bg-gradient-to-r from-brand-deepBlue via-brand-brightBlue to-brand-orange bg-clip-text text-transparent">
-              Speed & Precision
+              Accountability &amp; Precision
             </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            A transparent, battle-tested engineering pipeline designed to eliminate ambiguity, mitigate risk, and ship production code predictably.
+            A battle-tested 5-phase ERP deployment methodology designed to eliminate operational friction, safeguard historical data, and ensure seamless cutover without halting your daily business.
           </p>
         </div>
 

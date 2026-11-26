@@ -13,11 +13,11 @@ import {
 
 export default function About() {
   const checklist = [
-    'Deep expertise in SAP & ERP and CRM ecosystems',
-    'Customized solutions aligned to your business goals',
-    'Proven methodology for implementation and migration',
-    'Minimal downtime and risk-free transitions',
-    'Dedicated support and long-term partnership approach',
+    'Direct As-Is vs To-Be business process blueprinting before writing a single configuration',
+    'Clean master data extraction, deduplication, and reconciliation from Tally, Excel & legacy ERPs',
+    'Role-based hands-on UAT training for storekeepers, machine operators, billing teams & finance heads',
+    'Custom add-ons for GST e-Invoicing, E-Way bills, barcode labeling, and weighbridge automation',
+    'SLA-backed on-site & remote post-go-live hypercare and ongoing annual maintenance (AMC)',
   ];
 
   return (

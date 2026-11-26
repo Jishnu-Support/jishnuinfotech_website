@@ -86,7 +86,7 @@ export default function Pricing() {
             </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            Scale your engineering capacity on demand with dedicated squads, zero hidden overheads, and full intellectual property ownership.
+            Clear, predictable investment models covering turnkey implementation milestones, master data migration, and SLA-backed Annual Maintenance Contracts (AMC) without hidden fees.
           </p>
 
           {/* Billing Toggle */}
@@ -99,7 +99,7 @@ export default function Pricing() {
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              Monthly Sprints
+              Standard Milestone
             </button>
             <button
               onClick={() => setIsAnnual(true)}
@@ -109,7 +109,7 @@ export default function Pricing() {
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              <span>Annual Partnership</span>
+              <span>Annual Contract (AMC)</span>
               <span className={`text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold ${isAnnual ? 'bg-white/20 text-white' : 'bg-orange-500/20 text-brand-orange'}`}>
                 Save 20%
               </span>
@@ -148,20 +148,24 @@ export default function Pricing() {
                     {plan.name}
                   </h3>
                   <p className="mt-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 min-h-[40px]">
-                    {plan.tagline}
+                    {plan.tagline || plan.description}
                   </p>
 
                   {/* Price */}
                   <div className="mt-6 flex items-baseline gap-1">
                     <span className="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900 dark:text-white">
-                      ${price.toLocaleString()}
+                      {typeof price === 'string'
+                        ? (price.startsWith('₹') || price.startsWith('$') ? price : (price === 'Custom' ? 'Custom' : `₹${price}`))
+                        : `₹${(price || 0).toLocaleString()}`}
                     </span>
-                    <span className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-                      / month
-                    </span>
+                    {price !== 'Custom' && (
+                      <span className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+                        / month
+                      </span>
+                    )}
                   </div>
                   <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-1">
-                    {isAnnual ? 'Billed annually with dedicated lead' : 'Billed monthly with flexible cancellation'}
+                    {isAnnual ? 'Annual AMC with dedicated lead architect' : 'Standard monthly billing with priority SLA'}
                   </p>
 
                   {/* Features List */}

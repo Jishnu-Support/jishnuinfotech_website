@@ -11,10 +11,10 @@ export default function Hero() {
   const [activePhraseIndex, setActivePhraseIndex] = useState(0);
 
   const dynamicPhrases = [
-    { text: 'Accelerated Digital Expansion', color: 'from-brand-orange via-amber-400 to-orange-500' },
-    { text: 'Seamless Enterprise Agility', color: 'from-blue-500 via-cyan-400 to-indigo-600' },
-    { text: 'High-Velocity Enterprise Scale', color: 'from-emerald-500 via-teal-400 to-green-500' },
-    { text: 'Predictable Business Growth', color: 'from-purple-500 via-violet-400 to-indigo-500' },
+    { text: 'Accurate Inventory & Stock Control', color: 'from-brand-orange via-amber-400 to-orange-500' },
+    { text: 'Multi-Plant MRP & Production Planning', color: 'from-blue-500 via-cyan-400 to-indigo-600' },
+    { text: 'Zero-Error GST & E-Invoicing Compliance', color: 'from-emerald-500 via-teal-400 to-green-500' },
+    { text: 'End-to-End Shop Floor Visibility', color: 'from-purple-500 via-violet-400 to-indigo-500' },
   ];
 
   useEffect(() => {
@@ -45,14 +45,14 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-2xl sm:text-3xl lg:text-[2.35rem] font-extrabold font-heading text-slate-900 dark:text-white tracking-tight leading-snug sm:leading-tight"
             >
-              <span className="block text-slate-900 dark:text-white">Transforming Business Operations.</span>
-              <span className="block text-brand-brightBlue mt-1 sm:mt-1.5">Engineered for High-Growth Enterprises.</span>
+              <span className="block text-slate-900 dark:text-white">Enterprise ERP Implementation &amp; Consulting.</span>
+              <span className="block text-brand-brightBlue mt-1 sm:mt-1.5">For Manufacturing &amp; Growing Enterprises.</span>
               <div className="mt-2 sm:mt-3 flex flex-wrap items-baseline gap-x-2">
-                <span className="text-slate-900 dark:text-white font-bold">Powering</span>
+                <span className="text-slate-900 dark:text-white font-bold">Delivering</span>
                 <span className="inline-grid grid-cols-1 grid-rows-1 items-baseline">
                   {/* Invisible spacer: locks maximum width & height so the layout below NEVER jitters or shifts */}
                   <span className="invisible select-none pointer-events-none col-start-1 row-start-1" aria-hidden="true">
-                    Accelerated Digital Expansion.
+                    Multi-Plant MRP &amp; Production Planning.
                   </span>
                   <AnimatePresence mode="wait">
                     <motion.span
@@ -79,10 +79,10 @@ export default function Hero() {
             >
               <div>
                 <p className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 leading-snug">
-                  Bridging complex industrial shop-floors with world-class ERP &mdash; turning operational friction into measurable enterprise velocity.
+                  Connecting shop-floor operations with institutional ERP &mdash; delivering live inventory control, production scheduling, and zero-error statutory compliance.
                 </p>
                 <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
-                  Jishnu Infotech empowers mid-market manufacturers and large enterprises with institutional-grade ERP deployments, custom SAP B1 add-ons, and proven end-to-end digital transformation across SAP, Oracle NetSuite, and Zoho.
+                  Jishnu Infotech partners with discrete manufacturers, auto ancillaries, and growing enterprises across Hosur, Bangalore, and Pan-India to implement, customize, and maintain SAP Business One, SAP S/4HANA, Oracle NetSuite, Zoho, and JIT ERP with zero business disruption.
                 </p>
               </div>
             </motion.div>

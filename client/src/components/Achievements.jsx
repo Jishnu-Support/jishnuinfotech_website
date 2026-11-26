@@ -49,8 +49,8 @@ export default function Achievements() {
     {
       value: 40,
       suffix: '%+',
-      label: 'Through Automation and Optimization',
-      sub: 'Average reduction in cycle times',
+      label: 'Operational Cycle Time Reduction',
+      sub: 'Achieved via process re-engineering & automation',
     },
     {
       value: 12,
@@ -135,7 +135,7 @@ export default function Achievements() {
               </div>
 
               <h3 className="text-2xl font-bold font-heading text-white">
-                50+ Ready to help you, Expert People
+                50+ Enterprise ERP Specialists &amp; Consultants
               </h3>
 
               <p className="text-xs text-slate-300 mt-3 leading-relaxed">

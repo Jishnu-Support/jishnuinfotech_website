@@ -7,7 +7,6 @@ import {
   FaLinkedinIn,
   FaYoutube,
   FaWhatsapp,
-  FaTelegram,
 } from 'react-icons/fa6';
 import { Mail, Phone, MapPin, Sparkles, CheckCircle2, Clock, Building2 } from 'lucide-react';
 import api from '../api/client';
@@ -48,7 +47,6 @@ export default function Footer() {
     { name: 'Instagram', icon: FaInstagram, href: 'https://instagram.com/jishnuinfotech' },
     { name: 'YouTube', icon: FaYoutube, href: 'https://youtube.com/@jishnuinfotech' },
     { name: 'WhatsApp', icon: FaWhatsapp, href: 'https://wa.me/919566823219' },
-    { name: 'Telegram', icon: FaTelegram, href: 'https://t.me/jishnuinfotech' },
   ];
 
   return (

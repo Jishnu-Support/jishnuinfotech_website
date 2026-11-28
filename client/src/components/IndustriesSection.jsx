@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 export default function IndustriesSection() {
   const [activeIndustry, setActiveIndustry] = useState('auto');
 
-  // 10 Industry Client Logos directly from uploaded portfolio
+  // 12 Industry Client Logos directly from uploaded portfolio
   const clientLogos = [
     {
       id: 'renacon',
@@ -28,11 +28,25 @@ export default function IndustriesSection() {
       desc: 'AAC blocks & light-weight construction manufacturing ERP',
     },
     {
+      id: 'metcraft',
+      name: 'Metcraft Engineering',
+      logo: '/clients/metcraft.png',
+      industry: 'Power Towers & Steel Structures',
+      desc: 'Heavy structural engineering, power transmission & solar MMS',
+    },
+    {
       id: 'ascent-circuits',
       name: 'Ascent Circuits',
       logo: '/clients/ascent-circuits.png',
       industry: 'Electronics & PCB Manufacturing',
       desc: 'High-precision printed circuit board production & supply chain',
+    },
+    {
+      id: 'spiral-engineering',
+      name: 'Sunflow / S-Turbine Systems',
+      logo: '/clients/spiral-engineering.png',
+      industry: 'Industrial Ventilation & Turbines',
+      desc: 'Precision turbine systems, ventilation engineering & component manufacturing',
     },
     {
       id: 'pv-group',
@@ -405,8 +419,8 @@ export default function IndustriesSection() {
             </p>
           </div>
 
-          {/* Grid of 10 Client Logos */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5">
+          {/* Grid of 12 Client Logos in balanced 6-column desktop grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5">
             {clientLogos.map((client) => (
               <div
                 key={client.id}

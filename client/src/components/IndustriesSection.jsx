@@ -42,11 +42,11 @@ export default function IndustriesSection() {
       desc: 'High-precision printed circuit board production & supply chain',
     },
     {
-      id: 'spiral-engineering',
-      name: 'Sunflow / S-Turbine Systems',
-      logo: '/clients/spiral-engineering.png',
-      industry: 'Industrial Ventilation & Turbines',
-      desc: 'Precision turbine systems, ventilation engineering & component manufacturing',
+      id: 'steel-centre',
+      name: 'Steel Centre',
+      logo: '/clients/steel-centre.png',
+      industry: 'Steel Processing & Metal Service',
+      desc: 'Precision steel processing, coil service centre & heavy metal distribution ERP',
     },
     {
       id: 'pv-group',
@@ -125,7 +125,7 @@ export default function IndustriesSection() {
       ],
       erpFit: 'SAP Business One (HANA) + JIT ERP + Egates Gate Management',
       metrics: '42% Reduction in job-work reconciliation delays',
-      featuredClients: ['Ascent Circuits', 'Kundan Cab', 'Balmer Lawrie - Van Leer'],
+      featuredClients: ['Steel Centre', 'Ascent Circuits', 'Metcraft Engineering', 'Kundan Cab', 'Balmer Lawrie - Van Leer'],
     },
     {
       id: 'discrete',
@@ -145,7 +145,7 @@ export default function IndustriesSection() {
       ],
       erpFit: 'SAP Business One / NetSuite Manufacturing',
       metrics: '99.8% BOM calculation accuracy across revisions',
-      featuredClients: ['Renacon AAC Blocks', 'Fybros', 'Bethliving.com', 'Kundan Cab'],
+      featuredClients: ['Steel Centre', 'Metcraft Engineering', 'Renacon AAC Blocks', 'Fybros', 'Bethliving.com', 'Kundan Cab'],
     },
     {
       id: 'logistics',
